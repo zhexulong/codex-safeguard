@@ -1,0 +1,27 @@
+{
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Bash",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bunx codex-safeguard pre-tool-use",
+            "statusMessage": "Codex Safeguard: checking shell command"
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bunx codex-safeguard stop",
+            "statusMessage": "Codex Safeguard: checking completion"
+          }
+        ]
+      }
+    ]
+  }
+}

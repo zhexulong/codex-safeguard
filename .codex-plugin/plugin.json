@@ -1,0 +1,25 @@
+{
+  "name": "codex-safeguard",
+  "version": "0.1.0",
+  "description": "Codex-native safeguard that blocks destructive Bash and PowerShell commands before execution.",
+  "author": {
+    "name": "zhexulong",
+    "url": "https://github.com/zhexulong"
+  },
+  "homepage": "https://github.com/zhexulong/codex-safeguard",
+  "repository": "https://github.com/zhexulong/codex-safeguard",
+  "license": "MIT",
+  "keywords": ["codex", "safety", "hooks", "plugin", "security"],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Codex Safeguard",
+    "shortDescription": "Block destructive Bash and PowerShell commands before Codex runs them.",
+    "longDescription": "Packages hook templates, install guidance, diagnostics, and explanation workflows for a Codex-native command safeguard inspired by claude-code-safety-net.",
+    "developerName": "zhexulong",
+    "category": "Security",
+    "defaultPrompt": [
+      "Use Codex Safeguard to install destructive-command protection in this repo.",
+      "Use Codex Safeguard to explain why a command was blocked."
+    ]
+  }
+}

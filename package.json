@@ -1,0 +1,46 @@
+{
+  "name": "codex-safeguard",
+  "version": "0.1.0",
+  "description": "Codex-native safeguard that blocks destructive Bash and PowerShell commands before execution",
+  "type": "module",
+  "bin": {
+    "codex-safeguard": "dist/src/cli/codex-safeguard.js"
+  },
+  "files": [
+    "dist",
+    ".codex-plugin",
+    ".codex",
+    "skills",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "node scripts/remove-dist.mjs && tsc --project tsconfig.build.json",
+    "check": "bun run lint && bun run typecheck && bun run test && bun run build",
+    "lint": "biome check .",
+    "lint:fix": "biome check --write .",
+    "test": "node scripts/remove-dist.mjs && bun test tests",
+    "typecheck": "tsc --noEmit"
+  },
+  "homepage": "https://github.com/zhexulong/codex-safeguard",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zhexulong/codex-safeguard.git"
+  },
+  "bugs": {
+    "url": "https://github.com/zhexulong/codex-safeguard/issues"
+  },
+  "license": "MIT",
+  "engines": {
+    "node": ">=20"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "2.3.10",
+    "@types/bun": "latest",
+    "@types/shell-quote": "^1.7.5",
+    "typescript": "^5.9.3"
+  },
+  "dependencies": {
+    "shell-quote": "^1.8.3",
+    "zod": "^4.3.5"
+  }
+}
